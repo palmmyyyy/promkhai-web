@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>prom-khai — POS for Retail Stores</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --card: #171a21;
+    --text: #e8eaed;
+    --muted: #9aa0a6;
+    --accent: #4f8cff;
+    --border: #2a2e37;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+  }
+  header {
+    margin-bottom: 40px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 13px;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    padding: 4px 12px;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 32px;
+    margin: 0 0 8px;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 18px;
+    margin: 0;
+  }
+  section {
+    margin-top: 32px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 0 0 12px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+  li {
+    margin-bottom: 8px;
+  }
+  li:last-child {
+    margin-bottom: 0;
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 14px;
+  }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="badge">Android app</span>
+      <h1>prom-khai</h1>
+      <p class="subtitle">A point-of-sale app for small retail stores.</p>
+    </header>
+
+    <section class="card">
+      <h2>What it does</h2>
+      <p>
+        prom-khai is a point-of-sale (POS) app built for small retail shops.
+        It runs entirely on the cashier's Android device — there is no server
+        or cloud backend behind it. Product, stock, and sales data is stored
+        locally on the device, so the app keeps working even without an
+        internet connection.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Sign-in with Google</h2>
+      <p>
+        prom-khai offers an optional "Sign in with Google" option so a
+        cashier can identify themselves inside the app. Signing in only
+        reads your basic Google profile (name, email address, and profile
+        picture) to display who is currently using the app. See our
+        <a href="privacy.html">Privacy Policy</a> for details on exactly
+        what is accessed and how it's used.
+      </p>
+    </section>
+
+    <section>
+      <h2>Key features</h2>
+      <div class="card">
+        <ul>
+          <li>Works fully offline — local SQLite storage on the device</li>
+          <li>Product catalog and stock tracking</li>
+          <li>No account or backend server required to use the app</li>
+          <li>Optional Google Sign-In for cashier identification</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      prom-khai · <a href="privacy.html">Privacy Policy</a> · Contact:
+      <a href="mailto:wannoppi@fusionsoft.co.th">wannoppi@fusionsoft.co.th</a>
+    </footer>
+  </div>
+</body>
+</html>
