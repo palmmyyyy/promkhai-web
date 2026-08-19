@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Manual — PromKhai</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --card: #171a21;
+    --text: #e8eaed;
+    --muted: #9aa0a6;
+    --accent: #4f8cff;
+    --border: #2a2e37;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+  }
+  header {
+    margin-bottom: 40px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 13px;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    padding: 4px 12px;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 30px;
+    margin: 0 0 8px;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 17px;
+    margin: 0;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 44px 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  p {
+    margin: 0 0 12px;
+  }
+  ul, ol {
+    padding-left: 20px;
+    margin: 0 0 12px;
+  }
+  li {
+    margin-bottom: 6px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .step-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .step-card h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .step-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14.5px;
+  }
+  .tip {
+    background: rgba(79, 140, 255, 0.08);
+    border: 1px solid rgba(79, 140, 255, 0.3);
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 14.5px;
+    color: var(--muted);
+    margin: 0 0 12px;
+  }
+  .tip strong {
+    color: var(--text);
+  }
+  code {
+    background: #1f232c;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 13px;
+  }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 14px;
+  }
+  nav.toc {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 8px;
+  }
+  nav.toc p {
+    margin: 0 0 8px;
+    color: var(--muted);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  nav.toc ol {
+    margin: 0;
+    padding-left: 20px;
+  }
+  nav.toc li {
+    margin-bottom: 4px;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="badge">User Manual</span>
+      <h1>How to use PromKhai</h1>
+      <p class="subtitle">
+        A step-by-step guide from first launch to everyday use — for
+        shop owners and cashiers.
+      </p>
+    </header>
+
+    <nav class="toc">
+      <p>Contents</p>
+      <ol>
+        <li><a href="#start">Getting started</a></li>
+        <li><a href="#home">Home page</a></li>
+        <li><a href="#products">Managing products and stock</a></li>
+        <li><a href="#checkout">Opening a shift and selling</a></li>
+        <li><a href="#sales">Sales history</a></li>
+        <li><a href="#customers">Managing customers and credit</a></li>
+        <li><a href="#settings">Settings</a></li>
+        <li><a href="#sync">Multi-device sync</a></li>
+      </ol>
+    </nav>
+
+    <section id="start">
+      <h2>1. Getting started</h2>
+      <div class="steps">
+        <div class="step-card">
+          <h3><span class="step-num">1</span> Sign in with Google</h3>
+          <p>
+            On first launch, tap "Sign in with Google" and choose your
+            shop's Google account. This account identifies your shop —
+            every device signed in with the same account is treated as a
+            device belonging to that same shop, and data syncs between them.
+          </p>
+        </div>
+        <div class="step-card">
+          <h3><span class="step-num">2</span> Choose a language</h3>
+          <p>
+            Pick a language from the list. The screen previews the change
+            immediately as you select. Tap "Continue" to save it.
+          </p>
+        </div>
+        <div class="step-card">
+          <h3><span class="step-num">3</span> Set up your shop</h3>
+          <p>
+            Enter your shop name (required), address, phone number, and tax
+            ID, then tap "Save". This information appears on printed
+            receipts.
+          </p>
+        </div>
+        <div class="step-card">
+          <h3><span class="step-num">4</span> Free trial / Subscription</h3>
+          <p>
+            The app is usable during a free trial period. Once it ends,
+            you'll be taken to the subscription screen automatically. If
+            you've already subscribed, tap "Restore purchase" to restore
+            access instead of paying again.
+          </p>
+        </div>
+        <div class="step-card">
+          <h3><span class="step-num">5</span> You're in</h3>
+          <p>
+            Once you've completed the steps above, the app opens on the
+            Home page, ready to use.
+          </p>
+        </div>
+      </div>
+      <p class="tip" style="margin-top:14px">
+        <strong>Recommended order before your first real sale:</strong>
+        set up your shop → add categories and products under "Products" →
+        open a shift on the "Sell" screen → then start selling.
+      </p>
+    </section>
+
+    <section id="home">
+      <h2>2. Home page</h2>
+      <div class="card">
+        <p>The home page shows your shop name and today's date, split into two tabs:</p>
+        <ul>
+          <li>
+            <strong>Overview</strong> — a "Sell now" button that opens the
+            checkout screen; stat cards for today's sales, bills, and
+            profit; a shift-status card (with an "Open shift" button if no
+            shift is open yet); alerts for low-stock products (tap through
+            to the Products page) and overdue customer credit; a shortcut
+            row to Products, Customers, Sales, and Settings; and a recent
+            sales list with a "View all" link
+          </li>
+          <li>
+            <strong>Sales Report</strong> — a chart summarizing sales over
+            time, for an overview of how the shop is performing
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="products">
+      <h2>3. Managing products and stock</h2>
+      <div class="card">
+        <ul>
+          <li>Tap "Add product" to create a new product — name, price,
+            unit (piece/kg/liter/pack), cost price, starting stock
+            quantity, category, barcode, and SKU</li>
+          <li>Use the search bar or barcode scanner to find existing
+            products, and filter by category</li>
+          <li>Tap a product to edit it, or tap the stock-adjustment icon to
+            restock or reduce stock</li>
+          <li>The gear icon at the top lets you set the "low stock"
+            threshold, the VAT rate, and manage product categories</li>
+          <li>You can delete a product from its edit screen; if it already
+            has sales history, it's archived instead of deleted outright</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="checkout">
+      <h2>4. Opening a shift and selling</h2>
+      <div class="card">
+        <ul>
+          <li>Before selling, you must always <strong>open a shift</strong>
+            first by entering the starting cash amount in the drawer — the
+            shift status bar shows at the top of the sell screen</li>
+          <li>Search for products by name/SKU/barcode, or tap "Use scanner"
+            for continuous barcode scanning — items get added to a running
+            cart</li>
+          <li>Adjust item quantities with the +/− buttons, or remove an
+            item from the cart</li>
+          <li>Tap "Pay" to open the payment screen — enter a discount,
+            toggle VAT, and choose a payment method (Cash / Transfer /
+            PromptPay / Card / Credit)</li>
+          <li>Selecting "Credit" requires choosing a customer from the
+            list first</li>
+          <li>For cash payments, an "Exact amount" shortcut is available
+            and change due is calculated automatically</li>
+          <li>Tap "Confirm sale" to finalize the bill, then share, print
+            (via a Bluetooth printer), or download the receipt as a PDF</li>
+          <li>Remember to "Close shift" at the end of the day to reconcile
+            the cash drawer</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="sales">
+      <h2>5. Sales history</h2>
+      <div class="card">
+        <ul>
+          <li>View every past sale, with its total, date/time, and payment
+            method</li>
+          <li>Tap a sale to see its line items, and reprint, re-share, or
+            re-download the receipt</li>
+          <li>You can "Void" a sale if it was entered by mistake — a reason
+            is required</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="customers">
+      <h2>6. Managing customers and credit</h2>
+      <div class="card">
+        <ul>
+          <li>Tap "Add customer" and enter a name (required) and phone
+            number</li>
+          <li>Customers with an outstanding balance show a credit chip in
+            the list</li>
+          <li>Tap a customer to "Record payment" when they pay down their
+            balance (amount and an optional note)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="settings">
+      <h2>7. Settings</h2>
+      <div class="card">
+        <ul>
+          <li><strong>Account</strong> — see the signed-in name/email, and
+            "Sign out"</li>
+          <li><strong>Subscription</strong> — renew, subscribe, or restore
+            a previous purchase</li>
+          <li><strong>Language / Theme</strong> — change the app language,
+            and switch between system/light/dark theme</li>
+          <li><strong>Data sync</strong> — see the last sync status and tap
+            "Sync now" to sync immediately instead of waiting for the
+            automatic interval</li>
+          <li><strong>Bluetooth printer</strong> — select, change, or clear
+            a receipt printer, and run a test print</li>
+          <li><strong>Delete account</strong> — erases all shop data on
+            this device and signs you out (requires confirmation — this
+            cannot be undone)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="sync">
+      <h2>8. Multi-device sync</h2>
+      <div class="card">
+        <p>
+          If you use the app on multiple devices signed in with the same
+          Google account, your products, sales, and customer data sync
+          between them automatically via Google Drive — every 10 minutes
+          while the app is open and online, and immediately whenever the
+          app launches.
+        </p>
+        <ul>
+          <li>The sync indicator in the bottom-right corner spins while a
+            sync is in progress</li>
+          <li>If a sync fails, a red icon appears with a message explaining
+            why</li>
+          <li>The app keeps working normally without an internet
+            connection — it syncs as soon as it's back online</li>
+        </ul>
+        <p class="tip" style="margin-bottom:0">
+          <strong>Note:</strong> if two devices edit the same data while
+          both are offline, whichever syncs later may overwrite the other's
+          change. Sync often (or tap "Sync now" in Settings) whenever you
+          have an internet connection.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      PromKhai · <a href="home.html">Home</a> ·
+      <a href="privacy.html">Privacy Policy</a> · Contact:
+      <a href="mailto:wanwansweetdreams@gmail.com">wanwansweetdreams@gmail.com</a>
+    </footer>
+  </div>
+</body>
+</html>
